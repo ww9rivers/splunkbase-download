@@ -30,7 +30,7 @@ Download Mode:
 # Authenticate aginst Splunk's website (Okta) and return 'sid' and "SSOID' cookies.
 # Also return the 'status_code', 'status', and 'msg' fields from the server's reply.
 authenticate() {
-	readonly RESPONSE=$(curl -s -v -X POST \
+	readonly RESPONSE=$(curl -s -X POST \
 	-H 'Accept: application/json' \
 	-H 'Content-Type: application/json' \
 	-d "{
@@ -66,7 +66,11 @@ usage() {
 case "$1" in
 	a|auth|authenticate)
 		if [ "$#" -eq 3 ]; then
-			authenticate "$2" "$3"
+			SPLUNK_USER="$2"
+			SPLUNK_USERPW="$3"
+		fi
+		if [ "$SPLUNK_USERPW" != "" -a "$SPLUNK_USER" != "" ]; then
+			authenticate "$SPLUNK_USER" "$SPLUNK_USERPW"
 		else
 			echo -e "Error: The authenticate mode requires exactly 2 arguments\n"
 			usage
