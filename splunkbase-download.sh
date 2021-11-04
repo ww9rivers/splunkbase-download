@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Global Variables
 readonly BASE_AUTH_URL='https://account.splunk.com/api/v1/okta/auth'
