@@ -1,3 +1,5 @@
+*WARN*: This tool no longer seem to work.
+
 # Splunkbase Download Utility
 
 This utility provides a convenient method for Splunk administrators to download Splunkbase apps from the command line. This allows downloading apps for inspection/validation, staging apps for later installation, or installing apps while Splunk is unavailable, and saves the additional step of transferring apps from another system. It can also be integrated into build scripts for education or development Splunk deployments in order to automate the installation of apps.
