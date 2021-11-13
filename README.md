@@ -1,4 +1,4 @@
-*WARN*: This tool no longer seem to work.
+**WARN**: This tool no longer seems to work.
 
 # Splunkbase Download Utility
 
